@@ -715,7 +715,7 @@ section.about-content {
 @media (max-width: 768px) {
     
     #service{
-        height: 100rem;
+        height: 110rem;
     }
 
     .services-card{
