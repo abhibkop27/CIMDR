@@ -32,7 +32,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-   width: 100%;
+   width: calc(100vw - 10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,15 +40,6 @@ body {
     color: #333;
     padding: 10px 20px;
     z-index: 9999;
-}
-
-.connect a {
-    text-decoration: none;
-    color: #000;
-    padding: 10px 20px;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s;
 }
 
 .navbar .logo {
@@ -69,21 +60,6 @@ body {
     display: none;
     font-size: 2em;
     cursor: pointer;
-}
-
-@media (max-width: 425px){
-   
-    .connect a{
-        padding: 10px 8px;
-        font-size: 14px;
-    }
-
-    .menu-icon {
-       
-        font-size: 1.5em;
-        padding-top:2px;
-        cursor: pointer;
-    }
 }
 
 
@@ -239,7 +215,14 @@ body {
     border-radius: 8px;
 }
 
-
+.connect a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
 
 .titles {
     width: 50%; /* Adjust width for better alignment */
@@ -378,30 +361,26 @@ button:hover {
     .card {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        margin-top: 4em;
+        text-align:center;
+        margin-top: 3.5em;
     }
 
     .titles {
-        padding: 10px;
+        padding: 20px;
         width: 90%;
     }
 
     .company {
-        font-size: 23px;
+        font-size: 28px;
     }
 
     .main-h {
-        font-size: 17px;
-    }
-
-    .main-p{
-        font-size: 14px;
+        font-size: 28px;
     }
 
     button {
         width: 150px;
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -576,7 +555,7 @@ section.about-content {
     
     .aboutus-card {
         padding: 0px;
-        margin-top: 40%;
+        margin-top: 80%;
         
     }
 
@@ -713,7 +692,7 @@ section.about-content {
 @media (max-width: 768px) {
     
     #service{
-        height: 110rem;
+        height: 120rem;
     }
 
     .services-card{

@@ -74,15 +74,7 @@ body {
 @media (max-width: 425px){
    
     .connect a{
-        padding: 10px 8px;
-        font-size: 14px;
-    }
-
-    .menu-icon {
-       
-        font-size: 1.5em;
-        padding-top:2px;
-        cursor: pointer;
+        padding: 5px 10px;
     }
 }
 

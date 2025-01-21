@@ -42,15 +42,6 @@ body {
     z-index: 9999;
 }
 
-.connect a {
-    text-decoration: none;
-    color: #000;
-    padding: 10px 20px;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
 .navbar .logo {
     font-size: 1.5em;
     font-weight: bold;
@@ -73,16 +64,10 @@ body {
 
 @media (max-width: 425px){
    
-    .connect a{
-        padding: 10px 8px;
-        font-size: 14px;
-    }
 
-    .menu-icon {
-       
-        font-size: 1.5em;
-        padding-top:2px;
-        cursor: pointer;
+    .opt a{
+        font-size: 15px;
+        padding: 0px;
     }
 }
 
@@ -239,7 +224,14 @@ body {
     border-radius: 8px;
 }
 
-
+.connect a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
 
 .titles {
     width: 50%; /* Adjust width for better alignment */
