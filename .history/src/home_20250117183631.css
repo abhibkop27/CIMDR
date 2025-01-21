@@ -1,0 +1,713 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+   width: calc(100vw - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .connect {
+    font-size: 1em;
+    font-family: 'poppins';
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+
+/* Sidebar (for larger screens) */
+.sidebar {
+    position: fixed;
+    background-color: #F4F6FF;
+    width: 100px;
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'poppins';
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Mobile Navigation (hidden by default) */
+.mobile-nav {
+    display: none; /* Hide the mobile menu by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F4F6FF;
+    padding: 10px;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    margin: 10px 0;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide the sidebar on mobile */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #F4F6FF;
+        padding: 10px;
+    }
+
+    /* Display the mobile menu when active */
+    .mobile-nav.active {
+        display: block;
+    }
+}
+
+/* Toggle Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Company Logo */
+.logo {
+    height: 40px;
+    width: 70px;
+}
+
+/* Main Content */
+.container {
+    height: calc(100vh - 10px);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 20px; */
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: nowrap; /* Prevent wrapping for desktop view */
+     /* Add some spacing between text and image */
+}
+
+
+
+.img-container {
+    width: 50%; /* Adjust width to balance with the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.img-container img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.connect a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+
+.titles {
+    width: 50%; /* Adjust width for better alignment */
+    margin-left: 5%;
+    padding: 80px; 
+    
+  
+}
+
+
+
+
+.company {
+    font-family: 'Exo';
+    font-size: 50px;
+    font-weight: bold;
+    color:#0083B0;
+  
+}
+
+.main-h{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.main-p{
+    /* margin-top: 10px; */
+    /* padding: 10px; */
+    font-family: 'poppins';
+    padding-top: 5px;
+    color: #000;
+   
+ 
+    font-weight: 300;
+}
+
+
+
+button {
+    font-size: 15px;
+    margin-top: 10px;
+    width: 200px;
+    padding: 15px;
+    background-color: #06BEB6;
+    border: none;
+    color: white;
+    font-family: 'inter';
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #48B1BF, #06BEB6);
+    transform: scale(1.1);
+    cursor: grab;
+}
+
+
+
+/* about us */
+
+/* General Styles */
+.aboutus-card {
+width: calc(100vw - 0px);
+    padding-top: 70px;
+}
+
+.headers {
+    margin-left: 6%;
+}
+
+.headers-2 {
+    display: flex;
+    padding: 40px;
+    height: 60vh;
+    margin-top: 60px;
+    margin-left: 6%;
+}
+
+.about-h {
+    font-family: 'Poppins';
+    background: linear-gradient(to right, #2193b0, #6dd5ed); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    font-size: 45px;
+    line-height: 55px;
+}
+
+.about-content {
+    margin-left: 40px;
+}
+
+.about-p {
+    font-family: 'Inter';
+    font-size: 20px;
+    color: #000;
+}
+
+.circles {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    background-color: #EFF3EA;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.data p {
+    font-family: 'Inter';
+}
+
+
+
+
+
+
+
+
+/* service */
+
+
+.services-card {
+    width: calc(100vw - 0px);
+    height: calc(100vh - 0px);
+    padding-top: 40px;
+    margin-top: 10px;
+    background-color: #f4f4f9;
+
+   
+  }
+  
+
+  
+
+  
+  
+  
+  .services-container {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding-top: 7rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .service-card h3 {
+    font-family: 'Inter';
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #21a1f1;
+  }
+  
+  .service-card p {
+    color: #555;
+    font-family: 'Exo';
+  }
+  
+  .more {
+    color: #000;
+    cursor: grab;
+    font-family: 'Exo';
+  }
+  
+  .more:hover {
+    color: #06BEB6;
+  }
+  
+
+  /* contact */
+
+/* General Styles */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    min-height: calc(100vh - 20px);
+    /* width: 100%; */
+    /* background-color: #000; */
+   
+}
+
+.contacts-card {
+    width: 100%;
+    /* padding-top: 30px; */
+}
+
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card .left-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .left-section h2 {
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+.contact-card .left-section p {
+    font-size: 1rem;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-family: 'Inter';
+}
+
+.contact-card .left-section a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card .left-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-card .form-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card .form-section form input,
+.contact-card .form-section form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-card .form-section form textarea {
+    resize: none;
+}
+
+.contact-card .form-section form button {
+    padding: 12px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card .form-section form button:hover {
+    background-color: #163574;
+}
+
+.form-section h2 {
+    font-family: 'Poppins';
+    font-size: 22px;
+    color: #000000;
+    margin-left: 0px;
+    margin: 5px;
+}
+
+
+
+/* carrer */
+
+.carrer-card{
+   
+    width: calc(100vw - 0px);
+    /* padding-top: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+
+
+.career-page {
+    background: #ffffff;
+    width: calc(100vw - 50px);
+    max-width: 1100px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    /* min-height: 80vh; */
+}
+
+.info-section {
+    flex: 1;
+    padding: 20px;
+    
+    border-right: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.info-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+    text-align: center;
+    font-family: 'Exo'
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-section ul li {
+    font-size: 1rem;
+    color: #2c3e50;
+    padding-left: 20px;
+    position: relative;
+    font-family: 'Inter';
+}
+
+.info-section ul li:before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 1rem;
+}
+
+.info-section img{
+   
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 25vw;
+    height: 35vh;
+}
+
+.form-section {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f9f9f9;
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+
+    color: #2c3e50;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-family: 'Inter';
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 9px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Inter';
+}
+
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+.form-group button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Added transform for smooth scaling */
+}
+
+.form-group button:hover {
+    background: #2980b9; /* Slightly darker shade for hover effect */
+    transform: scale(1.05); /* Button enlarges slightly when hovered */
+}
+
+.row-fields {
+    display: flex;
+    gap: 20px; /* Adjust gap between fields */
+}
+
+.row-fields .half-width {
+    flex: 1; /* Ensure both fields take equal width */
+}
+
+.row-fields .half-width label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-family: 'Inter';
+}
+
+.row-fields .half-width input {
+    width: 100%;
+    padding: 9px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Inter';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

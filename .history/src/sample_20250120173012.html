@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Super Software</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        color: #333;
+        padding: 10px 20px;
+        z-index: 9999;
+      }
+
+      .navbar .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .navbar .connect {
+        font-size: 1em;
+        font-family: 'poppins';
+      }
+
+      .opt {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: none;
+        font-size: 2em;
+        cursor: pointer;
+      }
+
+      /* Sidebar (for larger screens) */
+      .sidebar {
+        position: fixed;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        width: 100px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        margin: 15px 0;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-family: 'Exo';
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #575757;
+      }
+
+      /* Mobile Navigation (hidden by default) */
+      .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f4f6ff;
+        padding: 10px;
+      }
+
+      .mobile-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .mobile-nav ul li {
+        margin: 10px 0;
+      }
+
+      .mobile-nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+
+      /* Main Content Layout */
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 80px;
+        padding: 0 20px;
+      }
+
+      .card {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        align-items: flex-start; /* Align text to the left */
+      }
+
+      .img-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .img-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .titles {
+        width: 50%;
+        padding: 40px;
+        text-align: left; /* Align titles to left */
+      }
+
+      .company {
+        font-size: 50px;
+        font-weight: bold;
+        color: #0083b0;
+      }
+
+      .main-h {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .main-p {
+        font-size: 18px;
+        color: #333;
+        font-weight: 300;
+      }
+
+      .button {
+        font-size: 15px;
+        margin-top: 10px;
+        width: 200px;
+        padding: 15px;
+        background-color: #06bebe;
+        border: none;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .button:hover {
+        background: linear-gradient(to right, #48b1bf, #06bebe);
+        transform: scale(1.1);
+        cursor: grab;
+      }
+
+      /* Service Section */
+      .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding-top: 1rem;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card img {
+        width: 200px;
+        margin-bottom: 10px;
+        height: auto;
+      }
+
+      .service-card h3 {
+        font-family: 'Inter';
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+        color: #21a1f1;
+      }
+
+      .service-card p {
+        color: #555;
+        font-family: 'Exo';
+      }
+
+      /* Service Card Hover Effect */
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* About Us Section */
+      .aboutus-card {
+        width: 100%;
+        padding: 80px;
+      }
+
+      .about-h {
+        font-family: 'Poppins';
+        background: linear-gradient(to right, #2193b0, #6dd5ed);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 45px;
+      }
+
+      .about-text h2 {
+        font-size: 1.7rem;
+        color: #21a1f1;
+      }
+
+      .about-text p {
+        font-family: 'Inter';
+        font-size: 1.2rem;
+      }
+
+      .about-image img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      /* About Us Section Responsiveness */
+      @media (max-width: 768px) {
+        .about-h {
+          font-size: 30px;
+        }
+
+        .about-text h2 {
+          font-size: 1.5rem;
+        }
+
+        .about-text p {
+          font-size: 1.1rem;
+        }
+
+        .about-image {
+          width: 90%;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-h {
+          font-size: 25px;
+        }
+
+        .about-text h2 {
+          font-size: 1.4rem;
+        }
+
+        .about-text p {
+          font-size: 1rem;
+        }
+
+        .about-image {
+          width: 100%;
+        }
+      }
+
+      /* Contact Section */
+      .contact-page {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 0px);
+      }
+
+      .contact-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .contact-card .form-section form input,
+      .contact-card .form-section form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      /* Mobile Contact Section */
+      @media (max-width: 768px) {
+        .contact-card {
+          padding: 20px;
+        }
+
+        .contact-card .form-section form {
+          gap: 10px;
+        }
+
+        .contact-card .form-section form input,
+        .contact-card .form-section form textarea {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-card .form-section form input,
+        .contact-card .form-section form textarea {
+          font-size: 1rem;
+        }
+
+        .contact-card .form-section form button {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">
+        <img class="logo" src="../assets/img/DSSlogo.png" alt="" />
+      </div>
+      <div class="opt">
+        <div class="connect"><a href="./carrer.html">Careers</a></div>
+        <div class="connect"><a href="#contact" class="scroll-link">Connect with us</a></div>
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </div>
+    </div>
+
+    <!-- Sidebar for larger screens -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#home" class="scroll-link">Home</a></li>
+        <li><a href="#about" class="scroll-link">About</a></li>
+        <li><a href="#service" class="scroll-link">Services</a></li>
+        <li><a href="#contact" class="scroll-link">Contact</a></li>
+        <li><a href="#Career" class="scroll-link">Careers</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <div class="container" id="home">
+      <div class="card">
+        <div class="titles">
+          <h1 class="company">Dynamic Super Software:</h1>
+          <h2 class="main-h">Elevating your core business systems</h2>
+          <p class="main-p">
+            At Dynamic Super Software, we deliver smart solutions that improve efficiency and drive innovation. Our team works with you to turn challenges into opportunities, helping your business make better decisions and achieve great results.
+          </p>
+          <button class="button">Explore Our Services</button>
+        </div>
+        <div class="img-container">
+          <img src="../assets/img/c.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="container" id="about">
+      <div class="aboutus-card">
+        <h1 class="about-h">About Dynamic Super Software</h1>
+        <section class="about-content">
+          <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>Dynamic Super Software, founded in 1997, is a leading provider of custom software solutions. We specialize in building high-quality software tailored to meet the unique needs of our clients. With over 20 years of experience, our team has delivered successful projects across various industries, helping businesses thrive through innovative technology.</p>
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide innovative software solutions that drive business success. We aim to help organizations achieve operational excellence by delivering high-performance software that meets their evolving needs. We believe in building long-term relationships with our clients, ensuring that we support their growth and success.</p>
+            <h2>Our Vision</h2>
+            <p>We aspire to be a global leader in custom software development, known for our commitment to quality, customer satisfaction, and innovation. Our goal is to continue providing solutions that empower businesses to scale and adapt in an ever-changing technological landscape.</p>
+          </div>
+          <div class="about-image">
+            <img src="../assets/img/teamcompany.png" alt="Our Team" />
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container" id="service">
+      <div class="services-container">
+        <div class="service-card">
+          <img src="../assets/img/web.gif" alt="Web Development" />
+          <h3>Web Development</h3>
+          <p>Building high-quality, responsive websites tailored for your business.</p>
+          <a href="./services/webdevelopment.html"><b>More</b></a>
+        </div>
+        <div class="service-card">
+          <img src="../assets/img/mobile.gif" alt="Mobile Applications" />
+          <h3>Mobile Applications</h3>
+          <p>Creating seamless mobile experiences for Android and iOS.</p>
+          <a href="#"><b>More</b></a>
+        </div>
+        <div class="service-card">
+          <img src="../assets/img/windows.gif" alt="Windows Applications" />
+          <h3>Windows Applications</h3>
+          <p>Custom desktop applications to optimize your workflows.</p>
+          <a href="#"><b>More</b></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+      <div class="contact-page">
+        <div class="contact-card">
+          <div class="left-section">
+            <h2>Contact Information</h2>
+            <p>Email us: <a href="mailto:contact@dss.com">bkopabhi@gmail.com</a></p>
+            <p>Call us: <a href="https://wa.me/+917709437066" target="_blank">+91 7709437066</a></p>
+            <p>Visit us: <br />
+              <a href="https://maps.app.goo.gl/dbj5upCLnnLrKLyN9" target="_blank">Dynamic Super Software, Sangli, Maharashtra, India</a>
+            </p>
+          </div>
+          <div class="form-section">
+            <h2>We're Here to Help</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="apikey" value="f366a208-4a55-41c9-8898-09ee06530176">
+              <input type="text" name="name" id="name" placeholder="Your Name" required />
+              <input type="email" name="email" id="email" placeholder="Your Email" required />
+              <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" maxlength="10" required />
+              <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector('.mobile-nav');
+        menu.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>

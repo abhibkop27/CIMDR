@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Sidebar Design</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      background: #f5f7fa;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: #ffffff;
+      border-right: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar .logo {
+      width: 80%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .sidebar .logo img {
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background: #f0f0f0;
+      color: #007bff;
+      box-shadow: inset 2px 0 0 #007bff;
+    }
+
+    .sidebar ul li a span {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: #007bff;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+      background: #f5f7fa;
+    }
+
+    .main-content h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .sidebar ul li a {
+        font-size: 0.9rem;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://via.placeholder.com/200x100" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="#home"><span>🏠</span> Home</a></li>
+      <li><a href="#about"><span>👤</span> About</a></li>
+      <li><a href="#services"><span>🛠</span> Services</a></li>
+      <li><a href="#portfolio"><span>📁</span> Portfolio</a></li>
+      <li><a href="#contact"><span>📞</span> Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to the Pro Sidebar</h1>
+    <p>
+      This sidebar is designed to look professional and modern. It includes smooth hover effects, a clean color scheme, and elegant typography.
+    </p>
+    <p>
+      The sidebar can be customized to fit any website or application, making it a versatile choice for professional designs.
+    </p>
+  </div>
+
+</body>
+</html>

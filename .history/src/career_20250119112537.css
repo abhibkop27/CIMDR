@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+
+
+
+        /* Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            position: relative;
+            z-index: 10; /* Ensure header is above the content */
+        }
+        
+        .logo img {
+            height: 70px;
+            width: 100px;
+        }
+        
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 11; /* Make sure the menu icon stays clickable above other content */
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px; /* Initially hidden off-screen */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            padding-top: 50px;
+            z-index: 1000; /* Ensure sidebar appears above other content */
+        }
+        
+        .sidebar.active {
+            right: 0; /* Slide in when active */
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .sidebar ul li a:hover {
+            background-color: #444;
+        }
+
+        
+        /* Close Button for Sidebar */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+       
+
+        /* Full-width Hero Image */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 54vh; /* Adjusted to a more fluid size for responsiveness */
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+/* Explore Button */
+.explore-btn {
+    position: absolute;
+    top: 74%;
+    left: 5%; /* Center the button horizontally */
+    transform: translateX(-50%) translateY(-50%); /* Adjust for accurate centering */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #2980b9;
+    transform: translateX(-50%) translateY(-50%) scale(1.1); /* Slightly enlarge the button */
+    opacity: 0.9; /* Add slight fade effect */
+}
+
+/* Career Cards Section */
+.career-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    padding: 20px;
+    /* margin-top: 20px; */
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30vw;
+    height: 33vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    margin: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    color: #3498db;
+}
+
+.card ul li{
+    margin: 10px;
+    font-family: 'inter';
+}
+
+.card button{
+    padding: 7px 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Exo';
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+
+}
+
+.card button:hover{
+    background-color: #2980b9;
+    
+    opacity: 0.9; /* Add slight fade effect */
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .explore-btn {
+        font-size: 1rem; /* Smaller button text on smaller screens */
+        padding: 8px 15px;
+    }
+
+    .card {
+        width: 100%; /* Full width for cards on small screens */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-btn {
+        font-size: 1rem; /* Adjust font size further for mobile */
+        padding: 8px 12px;
+    }
+}
+
+  

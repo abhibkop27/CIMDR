@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Dynamic Super Software</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f3f7fa;
+      color: #333;
+    }
+
+    .navbar {
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: #1abc9c;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: -3rem 2rem 2rem;
+    }
+
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card img {
+      width: 70px;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      margin: 1rem 0;
+      font-size: 1.5rem;
+      color: #1abc9c;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      .services-container {
+        margin: -2rem 1rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Dynamic Super Software</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <h2>Innovative Solutions</h2>
+    <p>Empowering your business with cutting-edge technology</p>
+  </div>
+
+  <div class="services-container">
+    <div class="service-card">
+      <img src="https://via.placeholder.com/70" alt="Web Development">
+      <h3>Web Development</h3>
+      <p>Creating high-quality websites tailored to your business.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://via.placeholder.com/70" alt="Mobile Applications">
+      <h3>Mobile Applications</h3>
+      <p>Developing user-friendly mobile apps for Android and iOS.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://via.placeholder.com/70" alt="E-Invoice & E-Way Bill">
+      <h3>E-Invoice & E-Way Bill</h3>
+      <p>Simplify your invoicing process with our solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://via.placeholder.com/70" alt="Windows Applications">
+      <h3>Windows Applications</h3>
+      <p>Streamlining your workflow with custom Windows apps.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://via.placeholder.com/70" alt="Cloud Services">
+      <h3>Cloud Services</h3>
+      <p>Scalable cloud solutions for modern businesses.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Dynamic Super Software. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

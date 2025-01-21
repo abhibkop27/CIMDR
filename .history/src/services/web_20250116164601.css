@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('./assets/fonts/Poppins/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hero {
+    background: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'poppins';
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'inter';
+    /* margin-bottom: 30px; */
+}
+
+
+
+
+.services,
+
+.work-with-us {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Always Visible Unique Sidebar</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 300px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .sidebar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+      z-index: 1;
+    }
+
+    .sidebar .logo {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .logo img {
+      width: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .sidebar ul li {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li a {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      background: #f4f4f4;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .main-content h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Sidebar Icons (Optional) */
+    .sidebar ul li a span {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://via.placeholder.com/80" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="#home"><span>🏠</span> Home</a></li>
+      <li><a href="#about"><span>👤</span> About</a></li>
+      <li><a href="#services"><span>🛠</span> Services</a></li>
+      <li><a href="#portfolio"><span>📁</span> Portfolio</a></li>
+      <li><a href="#contact"><span>📞</span> Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to the Unique Sidebar Layout</h1>
+    <p>
+      This is a unique always-visible sidebar design. The sidebar is stylish with a gradient background, a floating logo, and modern hover effects.
+    </p>
+    <p>
+      The content is scrollable, and the layout is fully responsive, making it suitable for a variety of applications.
+    </p>
+  </div>
+
+</body>
+</html>

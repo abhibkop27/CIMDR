@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Page</title>
+    <link rel="stylesheet" href="./career.css">
+</head>
+<body>
+
+   
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/DSSlogo.png" alt="Company Logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeMenu()">&times;</button>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#experienced">About US</a></li>
+            <li><a href="#contact">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Full-width Image at the top -->
+    <div class="hero-image">
+        <img src="../assets/img/carrerpage1.png" alt="Hero Image">
+        <!-- Explore Button -->
+       
+    </div>
+
+    <!-- Cards Section -->
+    <div class="career-cards">
+        <div class="card">
+            <h3>Students/Internship</h3>
+            <ul>
+                <li><b>Mentorship:</b> Learn from industry professionals and get guidance to accelerate your career.</li>
+                <li><b>Skill Development:</b> Enhance your technical skills in programming, coding, and software tools.</li>
+                <li><b>Collaboration:</b> Be part of a collaborative team environment and contribute to project outcomes.</li>
+                <li><b>Networking:</b> Build connections within the tech industry and enhance your career prospects.</li>
+                
+            </ul>
+           <button>Apply Now</button>
+        </div>
+        <div class="card">
+            <h3>Graduate/Experienced</h3>
+            <ul>
+                <li><b>Technology Expertise:</b> Utilize your experience with advanced programming languages, frameworks, and software development methodologies to drive innovation.</li>
+                <li><b>Career Advancement:</b> Opportunities for professional growth with access to leadership roles, skill development, and career progression.</li>
+                <li><b>Mentorship:</b> Guide junior developers and interns, sharing expertise and helping grow the team’s technical capabilities.</li>
+            </ul>
+           <button>Apply Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Flexibility at Work</h3>
+            <ul>
+                <li><b>Flexibility:</b> Work from anywhere with the ability to set your own hours and balance personal and professional life.</li>
+                <li><b>Self-Management:</b> Greater autonomy in managing tasks and setting priorities, which fosters independence.</li>
+                <li><b>Tech Skills Development:</b> Enhance digital proficiency by using online communication and collaboration tools.</li>
+                <li><b>Cost Savings:</b>Save on commuting, meals, office attire, and other office-related expenses.</li>
+        
+                
+            </ul>
+           <button id="applyButton">Apply Now</button>
+        </div>
+    </div>
+
+</body>
+<script src="./carrer.js"></script>
+</html>

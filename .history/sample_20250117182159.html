@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Super Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: radial-gradient(circle, #2ecc71, #3498db);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            animation: slideInLeft 1.5s;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: slideInLeft 2s;
+        }
+
+        .hero-content button {
+            padding: 10px 25px;
+            font-size: 1rem;
+            background-color: #ffffff;
+            color: #2ecc71;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: fadeIn 2.5s;
+        }
+
+        .hero-content button:hover {
+            transform: scale(1.1);
+            background-color: #ecf0f1;
+        }
+
+        .hero img {
+            width: 40%;
+            animation: slideInRight 1.5s;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .services {
+            padding: 50px 5%;
+            text-align: center;
+            background-color: white;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .services p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #7f8c8d;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 30%;
+            margin: 15px;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Dynamic Super Software</h1>
+            <p>Empowering businesses through cutting-edge technology and innovation.</p>
+            <button onclick="scrollToServices()">Discover More</button>
+        </div>
+        <img src="https://via.placeholder.com/500" alt="Illustration">
+    </div>
+
+    <div class="services" id="services">
+        <h2>Our Services</h2>
+        <p>Providing scalable and innovative solutions tailored to your business needs.</p>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="https://via.placeholder.com/60" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Building responsive and engaging websites that drive results.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/60" alt="Mobile Apps">
+                <h3>Mobile Applications</h3>
+                <p>Creating seamless mobile experiences for Android and iOS platforms.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/60" alt="Cloud Services">
+                <h3>Cloud Solutions</h3>
+                <p>Scalable and secure cloud solutions for your business growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>

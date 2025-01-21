@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles for All Screen Sizes */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .connect {
+    font-size: 1em;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.img-container {
+    width: 50%;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.titles {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Services Section */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding-top: 1rem;
+}
+
+/* Contact Section */
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Career Section */
+.career-page {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+}
+
+/* Responsive Styles */
+
+/* Tablet and Smaller Devices */
+@media (max-width: 768px) {
+    .navbar .center-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar .center-links.active {
+        display: flex;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .titles {
+        width: 100%;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .career-page {
+        flex-direction: column;
+    }
+}
+
+/* Laptop/Smaller Desktop */
+@media (max-width: 1024px) {
+    .navbar .center-links {
+        gap: 15px;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titles {
+        width: 70%;
+    }
+
+    .banner {
+        max-height: 60%;
+    }
+}
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+    .navbar .center-links {
+        gap: 20px;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titles {
+        width: 80%;
+    }
+
+    .banner {
+        max-height: 70%;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.2em;
+    }
+
+    .navbar .center-links a {
+        font-size: 0.9em;
+    }
+
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .titles {
+        width: 100%;
+        text-align: left;
+    }
+
+    .banner {
+        max-height: 60%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Page</title>
+    <style>
+        /* Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-width Hero Image */
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 70vh; /* Small height */
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Explore Button */
+        .explore-btn {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .explore-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Career Cards Section */
+        .career-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Full-width Image at the top -->
+    <div class="hero-image">
+        <img src="../assets/img/carrer.png" alt="Hero Image">
+        <!-- Explore Button -->
+        <button class="explore-btn">Explore</button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="career-cards">
+        <div class="card">
+            <h3>Internship</h3>
+            <p>Kickstart your career with an internship at Dynamic Super Software.</p>
+        </div>
+        <div class="card">
+            <h3>Experienced</h3>
+            <p>Join us if you have experience and want to make an impact.</p>
+        </div>
+    </div>
+
+</body>
+</html>

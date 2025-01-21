@@ -1,0 +1,254 @@
+
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #F2F9FF;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+    width: 70px;
+}
+
+.menu-icon {
+    color: #3498db;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #16404D;
+    border-radius: 17px;
+    transition: right 0.3s ease-in-out;
+    padding-top: 25px;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    text-align: left;
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-family: 'Exo';
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Close Button for Sidebar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+/* Full-width Hero Image */
+.hero-image {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+   
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+/* Career Cards Section */
+.career-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px; 
+     flex-wrap: wrap;
+     padding-top: 0px;
+    padding: 20px;
+
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    color: #3498db;
+}
+
+.card ul li {
+    margin: 10px;
+    font-family: 'Inter';
+}
+
+.apply {
+    padding: 7px 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Exo';
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+.card button:hover {
+    background-color: #2980b9;
+    opacity: 0.9;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and larger devices */
+@media (max-width: 1024px) {
+  
+    .hero-image {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+       
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+   
+    .card {
+        width: 45%; /* Adjust card width for medium screens */
+    }
+}
+
+/* Mobile and small devices */
+@media (max-width: 768px) {
+    
+
+    .menu-icon {
+        display: block;
+    }
+
+    
+    .hero-image {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+       
+    }
+    
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .career-cards {
+        flex-direction: column; /* Stack the cards vertically on small screens */
+    }
+
+    .card {
+        width: 100%; /* Full width for cards on small screens */
+        padding: 15px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+    .explore-btn {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
+

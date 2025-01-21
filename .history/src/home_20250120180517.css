@@ -1,0 +1,808 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+   width: calc(100vw - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .connect {
+    font-size: 1em;
+    font-family: 'poppins';
+}
+
+.opt{
+    display: flex;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+
+/* Sidebar (for larger screens) */
+.sidebar {
+    position: fixed;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+  /* Bottom Polygon */
+  .sidebar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+  }
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+ 
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'Exo';
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Mobile Navigation (hidden by default) */
+.mobile-nav {
+    display: none; /* Hide the mobile menu by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F4F6FF;
+    padding: 10px;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    margin: 10px 0;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide the sidebar on mobile */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #F4F6FF;
+        padding: 10px;
+    }
+
+    /* Display the mobile menu when active */
+    .mobile-nav.active {
+        display: block;
+    }
+}
+
+/* Toggle Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+.logo {
+    height: 40px;
+    width: 70px;
+}
+
+
+
+
+/* Main Content */
+.container {
+    height: calc(100vh - 10px);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 20px; */
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping for desktop view */
+    /* Add some spacing between text and image */
+}
+
+.img-container {
+    width: 50%; /* Adjust width to balance with the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.connect a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.titles {
+    width: 50%; /* Adjust width for better alignment */
+    margin-left: 5%;
+    padding: 80px;
+    margin-top: 3%;
+}
+
+/* Company Section */
+.company {
+    font-family: 'Exo';
+    font-size: 50px;
+    font-weight: bold;
+    color: #0083B0;
+}
+
+.main-h {
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.main-p {
+    font-family: 'Poppins';
+    color: #000;
+    font-weight: 300;
+}
+
+button {
+    font-size: 15px;
+    margin-top: 10px;
+    width: 200px;
+    padding: 15px;
+    background-color: #06BEB6;
+    border: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #48B1BF, #06BEB6);
+    transform: scale(1.1);
+    cursor: grab;
+}
+
+
+/* Slider Styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+/* Show only the first image initially */
+.slider-image:first-child {
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 75%;
+    z-index: 1500;
+    font-size: 1em;
+    color: #000;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+/* Responsive Design for Tablet (768px) */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 3.5em;
+    }
+
+    .titles {
+        width: 80%;
+        padding: 40px;
+    }
+
+    .img-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    button {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    .company {
+        font-size: 30px;
+    }
+
+    .main-h {
+        font-size: 30px;
+    }
+}
+
+/* Responsive Design for Mobile L (425px) */
+@media (max-width: 425px) {
+    .titles {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .company {
+        font-size: 28px;
+    }
+
+    .main-h {
+        font-size: 28px;
+    }
+
+    button {
+        width: 150px;
+        font-size: 13px;
+    }
+}
+
+/* Responsive Design for Mobile M (375px) */
+@media (max-width: 375px) {
+    .titles {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .company {
+        font-size: 24px;
+    }
+
+    .main-h {
+        font-size: 24px;
+    }
+
+    button {
+        width: 130px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design for Mobile S (320px) */
+@media (max-width: 320px) {
+    .titles {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .company {
+        font-size: 22px;
+    }
+
+    .main-h {
+        font-size: 22px;
+    }
+
+    button {
+        width: 120px;
+        font-size: 11px;
+    }
+}
+
+
+/* about us */
+
+.aboutus-card {
+    width: calc(100vw - 0px);
+    padding-top: 70px;
+    padding: 80px;
+}
+
+.headers {
+    margin-left: 6%;
+    margin-top: 3%;
+}
+
+.headers-2 {
+    display: flex;
+    padding: 40px;
+    height: 60vh;
+    margin-top: 60px;
+    margin-left: 6%;
+}
+
+.about-h {
+    font-family: 'Poppins';
+    background: linear-gradient(to right, #2193b0, #6dd5ed); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    color: transparent; /* Make the text transparent to show the gradient */
+    font-size: 45px;
+    line-height: 55px;
+}
+
+section.about-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.about-text {
+    width: calc(100vw - 600px);
+    line-height: 1.6;
+    margin-left: 5%;
+}
+
+.about-text h2 {
+    font-family: 'Poppins';
+    margin-top: 20px;
+    color: #21a1f1;
+    font-size: 1.7rem;
+}
+
+.about-text p {
+    font-family: 'Inter';
+    font-size: 1.2rem;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.about-image {
+    width: 45%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+   #about{
+        height: 80rem;
+    }
+
+    .aboutus-card {
+        padding: 0px;
+    }
+    .headers {
+        margin-left: 0;
+    }
+
+    section.about-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .about-text {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .about-image {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .about-h {
+        margin-top: 5em;
+        margin-left: 35px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-h {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .about-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* service */
+
+
+/* Ensure full-width layout with padding */
+.services-card {
+    width: 100%;
+    height: auto;
+    /* padding-top: 40px; */
+    /* padding: 80px; */
+    /* margin-top: 10px; */
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Grid setup for service cards */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    
+    padding-top: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Individual service card styling */
+.service-card {
+ 
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for service cards */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside service card */
+.service-card img {
+    width: 200px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+/* Title of each service */
+.service-card h3 {
+    font-family: 'Inter';
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #21a1f1;
+}
+
+/* Paragraph text inside service card */
+.service-card p {
+    color: #555;
+    font-family: 'Exo';
+}
+
+/* Link for "More" inside service card */
+.more {
+    color: #000;
+    cursor: pointer;
+    font-family: 'Exo';
+}
+
+.more:hover {
+    color: #06BEB6;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    
+    #service{
+        height: 150rem;
+    }
+
+    .services-card{
+        /* background-color: #fff; */
+        padding-top: 0px;
+    /* margin-top: 50%; */
+}
+   
+
+    .service-card img {
+        width: 150px;  /* Adjust image size for smaller screens */
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    .service-card p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .services-container {
+        grid-template-columns: 1fr 1fr;  /* Adjust to two columns for smaller screens */
+    }
+}
+
+/* For very small screens (like phones in portrait mode) */
+@media (max-width: 480px) {
+    .services-container {
+        grid-template-columns: 1fr;  /* Stack service cards in one column */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .service-card {
+        padding: 1rem;  /* Reduce padding to fit small screens */
+    }
+}
+
+
+  /* contact */
+
+/* General Styles */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    min-height: calc(100vh - 0px);
+    /* width: 100%; */
+    /* background-color: #000; */
+   
+}
+
+.contacts-card {
+    width: 100%;
+    /* padding-top: 30px; */
+    background-color: #f4f4f4;
+
+ 
+}
+
+
+
+/* contact */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card .left-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .left-section h2 {
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+.contact-card .left-section p {
+    font-size: 1rem;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-family: 'Inter';
+}
+
+.contact-card .left-section a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card .left-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-card .form-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card .form-section form input,
+.contact-card .form-section form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-card .form-section form textarea {
+    resize: none;
+}
+
+.contact-card .form-section form button {
+    padding: 12px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card .form-section form button:hover {
+    background-color: #163574;
+}
+
+.form-section h2 {
+    font-family: 'Poppins';
+    font-size: 22px;
+    color: #000000;
+    margin-left: 0px;
+    margin: 5px;
+}
+
+

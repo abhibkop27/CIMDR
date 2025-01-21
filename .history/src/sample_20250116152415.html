@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Dynamic Super Software</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .career-page {
+            background: #ffffff;
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .info-section {
+            flex: 1;
+            padding: 40px;
+            background: #f9f9f9;
+            border-right: 2px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #34495e;
+            text-align: center;
+        }
+
+        .info-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            text-align: center;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-section ul li {
+            font-size: 1rem;
+            color: #2c3e50;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-section ul li:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 1.2rem;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .form-group button {
+            width: 100%;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-group button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="career-page">
+        <!-- Company Info Section -->
+        <div class="info-section">
+            <h2>Why Choose Us?</h2>
+            <p>Dynamic Super Software is dedicated to building innovative solutions that drive business success. Here's what makes us special:</p>
+            <ul>
+                <li><strong>Innovation:</strong> Work on groundbreaking technologies and projects.</li>
+                <li><strong>Growth:</strong> Continuous learning opportunities for career advancement.</li>
+                <li><strong>Culture:</strong> Inclusive and supportive work environment.</li>
+            </ul>
+        </div>
+
+        <!-- Interview Form -->
+        <div class="form-section">
+            <h2>Apply Now</h2>
+            <form action="/submit-application" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position Applying For</label>
+                    <select id="position" name="position" required>
+                        <option value="">Select a position</option>
+                        <option value="software-developer">Software Developer</option>
+                        <option value="ui-ux-designer">UI/UX Designer</option>
+                        <option value="project-manager">Project Manager</option>
+                        <option value="qa-engineer">QA Engineer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Cover Letter</label>
+                    <textarea id="message" name="message" placeholder="Write a brief cover letter..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

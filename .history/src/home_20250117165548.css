@@ -1,0 +1,366 @@
+/* Main Container and Card */
+.container {
+    height: calc(100vh - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Ensure it wraps on smaller screens */
+    gap: 20px;
+}
+
+/* Adjust the width of images and titles for better mobile view */
+.titles {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    font-size: 1.2rem; /* Default font size for small screens */
+}
+
+.img-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* For smaller screens, stack the card's content */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titles, .img-container {
+        width: 100%;
+    }
+
+    .titles {
+        order: 1;
+    }
+
+    .img-container {
+        order: 2;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .connect {
+    font-size: 1em;
+    font-family: 'poppins';
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar .connect {
+        display: none;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    background-color: #F4F6FF;
+    width: 100px;
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-family: 'poppins';
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F4F6FF;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .mobile-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+
+/* Button */
+button {
+    font-size: 15px;
+    margin-top: 10px;
+    width: 200px;
+    padding: 15px;
+    background-color: #06BEB6;
+    border: none;
+    color: white;
+    font-family: 'inter';
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #48B1BF, #06BEB6);
+    transform: scale(1.1);
+    cursor: grab;
+}
+
+/* About Section */
+.aboutus-card {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.headers, .about-h, .about-p {
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.about-h {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 45px;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.clients {
+    width: 30%;
+    text-align: center;
+    background-color: #EFF3EA;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.clients h1 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .circles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Services */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-family: 'Inter';
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #21a1f1;
+}
+
+.service-card p {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 0;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+}
+
+/* Contact Section */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.contact-card .form-section {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.contact-card .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Career Section */
+.carrer-card {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.career-page {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-group button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for all sections */
+@media (max-width: 768px) {
+    .career-page {
+        flex-direction: column;
+    }
+    
+    .info-section, .form-section {
+        padding: 15px;
+    }
+
+    .form-group button {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+

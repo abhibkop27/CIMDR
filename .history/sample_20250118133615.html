@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Circular Sidebar</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+    }
+
+    /* Sidebar Wrapper */
+    .circular-sidebar {
+      position: fixed;
+      top: 50%;
+      left: -200px;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s ease-in-out;
+      z-index: 1000;
+    }
+    .circular-sidebar.active {
+      left: 50px;
+    }
+
+    /* Navigation Links */
+    .circular-sidebar ul {
+      list-style: none;
+      text-align: center;
+    }
+    .circular-sidebar ul li {
+      margin: 15px 0;
+    }
+    .circular-sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .circular-sidebar ul li a:hover {
+      color: #ffe6f0;
+    }
+
+    /* Toggle Button */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 2rem;
+      background: #ff7eb3;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1100;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+    .menu-toggle:hover {
+      background: #ff758c;
+    }
+
+    /* Main Content */
+    .content {
+      text-align: center;
+      z-index: 1;
+    }
+    .content h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+    .content p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Circular Sidebar -->
+  <div class="circular-sidebar" id="circularSidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to the Unique Circular Sidebar</h1>
+    <p>Click the menu icon to toggle the sidebar!</p>
+  </div>
+
+  <script>
+    const circularSidebar = document.getElementById('circularSidebar');
+
+    function toggleMenu() {
+      circularSidebar.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Form</title>
+    <style>
+        /* Reset and Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+           
+          
+        }
+        .content {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        .info-section, .form-section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .info-section {
+            background: #428ad1;
+        }
+        .info-section h2 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        .info-section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .info-section ul li {
+            margin-bottom: 10px;
+        }
+
+        img{
+            height: auto;
+            width: 150px;
+        }
+
+    .form-section{
+        /* background-color: #003d80; */
+        width: 70vh;
+    }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+        form .form-group {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Information Section -->
+        <div class="info-section">
+            <h2>Why Join Our Team?</h2>
+            <p>Dynamic Super Software is committed to innovation and excellence. By joining our team, you will:</p>
+            <ul>
+                <li>Work on cutting-edge technologies and challenging projects.</li>
+                <li>Enjoy a culture of continuous learning and growth.</li>
+                <li>Be part of an inclusive and collaborative environment.</li>
+            </ul>
+            <img src="../assets/img/robot.gif" alt="robo">
+        </div>
+        
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Apply for an Interview</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="apikey" value="YOUR_API_KEY">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why Do You Want to Join?</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your motivation" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

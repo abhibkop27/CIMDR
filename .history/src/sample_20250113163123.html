@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left Sidebar Navigation</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 250px;
+      height: 100vh;
+      padding: 20px 0;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      display: block;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #575757;
+    }
+
+    /* Content Styles */
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #f4f4f4;
+      overflow-y: auto;
+    }
+
+    .content section {
+      margin-bottom: 50px;
+    }
+
+    .content h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+   
+  </div>
+</body>
+</html>
