@@ -690,7 +690,7 @@ section.about-content {
     .services-card{
         /* background-color: #fff; */
         padding-top: 0px;
-    margin-top: 50%;
+    /* margin-top: 50%; */
 }
    
 
@@ -740,7 +740,7 @@ section.about-content {
 
 .contacts-card {
     width: 100%;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     background-color: #f4f4f4;
 
  
