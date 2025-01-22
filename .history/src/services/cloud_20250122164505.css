@@ -128,10 +128,6 @@ body {
     font-family: 'poppins';
 }
 
-.features-section p{
-    font-family: 'inter';
-}
-
 .features-grid {
     display: flex;
     justify-content: center;

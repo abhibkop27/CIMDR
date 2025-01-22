@@ -1,25 +1,3 @@
-@font-face {
-    font-family: 'poppins';
-    src: url('../../assets/fonts/Poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: 'poppins-bold';
-    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'inter';
-    src: url('../../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Exo';
-    src: url('../../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
-}
-  
-  
-  
   /* General Reset */
   * {
     margin: 0;
@@ -45,7 +23,6 @@ body {
 
 .page-heading h1 {
     font-size: 2.5em;
-    font-family: 'Exo';
 }
 
 @media (max-width: 768px) {
@@ -76,13 +53,11 @@ body {
 .hero-content h2 {
     color: #4facfe;
     font-size: 2em;
-    font-family: 'poppins';
     /* margin-bottom: 20px; */
 }
 
 .hero-content p {
     margin-bottom: 20px;
-    font-family: 'inter';
 }
 
 .hero-content a {
@@ -125,11 +100,6 @@ body {
     color: #4facfe;
     font-size: 2.2em;
     margin-bottom: 30px;
-    font-family: 'poppins';
-}
-
-.features-section p{
-    font-family: 'inter';
 }
 
 .features-grid {
