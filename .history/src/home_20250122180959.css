@@ -731,6 +731,8 @@ section.about-content {
 
   /* contact */
 
+
+
 /* General Styles */
 .contact-page {
     display: flex;
@@ -746,7 +748,16 @@ section.about-content {
 .contacts-card {
     width: 100%;
     padding-top: 30px;
+  
+
+ 
 }
+
+
+
+/* contact */
+
+
 
 .main-content {
     flex: 1;

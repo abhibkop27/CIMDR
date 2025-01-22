@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+ 
+ 
+ 
+ 
+ /* contact */
+
+/* General Styles */
+/* Main Content */
+.container {
+    height: calc(100vh - 10px);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 20px; */
+}
+
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    min-height: calc(100vh - 45px);
+    /* width: 100%; */
+    /* background-color: #000; */
+    /* background-color: #f4f4f4; */
+   
+}
+
+.contacts-card {
+    width: 100%;
+    /* padding-top: 30px; */
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-card {
+    background: white;
+    /* padding: 30px; */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card .left-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .left-section h2 {
+    font-family: 'Poppins';
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+.contact-card .left-section p {
+    font-size: 1rem;
+    margin: 15px 0;
+    line-height: 1.6;
+    font-family: 'Inter';
+}
+
+.contact-card .left-section a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card .left-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-card .form-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card .form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card .form-section form input,
+.contact-card .form-section form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-card .form-section form textarea {
+    resize: none;
+}
+
+.contact-card .form-section form button {
+    padding: 12px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card .form-section form button:hover {
+    background-color: #163574;
+}
+
+.form-section h2 {
+    font-family: 'Poppins';
+    font-size: 22px;
+    color: #000000;
+    margin-left: 0px;
+    margin: 5px;
+}
+
+@media (max-width: 768px){
+    .contact-card{
+        margin: 20px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contacts-card{
+        margin-top: 70%;
+        padding-top: 0px;
+        height: calc(100vh - 0px);
+    }
+}

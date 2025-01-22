@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <title>contact-us</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/DSSlogo.png" alt="Company Logo"> <!-- Replace with your logo path -->
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeMenu()">&times;</button>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#experienced">About US</a></li>
+            <li><a href="#contact">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" id="contact">
+        <div class="contacts-card">
+        <div class="contact-page">    
+          <div class="main-content">
+              <div class="contact-card">
+                  <div class="left-section">
+                      <h2>Contact Information</h2>
+                      <p>Email us: <a href="mailto:contact@dss.com">bkopabhi@gmail.com</a></p>
+                      <p>Call us: <a href="https://wa.me/+917709437066" target="_blank">+91 7709437066</a></p>
+                      <p>Visit us:<br> <a href="https://maps.app.goo.gl/dbj5upCLnnLrKLyN9" target="_blank"> Dynamic Super Software, Sangli, Maharashtra, India</a>
+                       </p>
+                  </div>
+      
+                  <div class="form-section">
+                    <h2>We're Here to Help</h2>
+                     
+                        <form action="https://api.web3forms.com/submit"  method="POST">
+                  
+                          <!-- Web3Forms Access Key -->
+                          <input type="hidden" name="apikey" value="f366a208-4a55-41c9-8898-09ee06530176">
+                          <input type="text"  name="name" id="name" placeholder="Your Name" required>
+                          <input type="email"  name="email" id="email"  placeholder="Your Email" required>
+                          <input type="phone"  name="phone" id="phone" placeholder="Your Phone Number" maxlength="10" 
+                          oninput="validatePhone(this)"  required>
+                          <textarea rows="5" id="message"  name="message" placeholder="Your Message" required></textarea>
+                          <button type="submit" >Send Message</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+       
+        
+      </div>
+    </div>
+      
+      </div>
+</body>
+</html>

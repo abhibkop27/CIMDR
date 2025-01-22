@@ -454,6 +454,7 @@ button:hover {
 .about-h {
     font-family: 'Poppins';
     background: linear-gradient(to right, #2193b0, #6dd5ed); /* Gradient colors */
+    font-size: 2rem;
     -webkit-background-clip: text; /* Clip background to text */
     color: transparent; /* Make the text transparent to show the gradient */
     font-size: 45px;
@@ -731,6 +732,8 @@ section.about-content {
 
   /* contact */
 
+
+
 /* General Styles */
 .contact-page {
     display: flex;
@@ -746,7 +749,16 @@ section.about-content {
 .contacts-card {
     width: 100%;
     padding-top: 30px;
+  
+
+ 
 }
+
+
+
+/* contact */
+
+
 
 .main-content {
     flex: 1;
