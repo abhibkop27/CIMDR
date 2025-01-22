@@ -148,9 +148,7 @@ body {
     right: 0;
     background-color: #F4F6FF;
     padding: 10px;
-    margin-top: 15%;
-    position: sticky;
-    
+    margin-top: 20%;
 }
 
 .mobile-nav ul {
@@ -161,7 +159,6 @@ body {
 
 .mobile-nav ul li {
     margin: 10px 0;
-    font-family: 'poppins';
 }
 
 .mobile-nav ul li a {
