@@ -32,7 +32,25 @@ body {
     background-color: #f9f9f9;
 }
 
+.page-heading {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #1d3557, #457b9d);
+    color: white;
+    border-radius: 8px;
+}
 
+.page-heading h1 {
+    font-family: 'Exo';
+    font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+    .page-heading h1 {
+        font-size: 2em;
+    }
+}
 
 .hero-section {
     display: flex;
@@ -113,15 +131,20 @@ body {
     font-family: 'inter';
 }
 
+.features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
 .feature {
     background: white;
     border: 1px solid #e0e0e0;
     padding: 20px;
     border-radius: 8px;
-    /* width: 250px; */
-    margin: 10px;
-    text-align: left;
+    width: 250px;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
